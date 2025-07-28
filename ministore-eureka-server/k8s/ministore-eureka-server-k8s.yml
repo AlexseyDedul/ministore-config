@@ -15,4 +15,4 @@ spring:
             client-secret: eFGYjlkGgzAUAg1uqmdx16TSsTFc4AHB
       resourceserver:
         jwt:
-          issuer-uri: http://keycloak-svc.ministore.svc.cluster.local:8080/realms/ministore
+          issuer-uri: http://keycloak.mini.store.127.0.0.1.nip.io:31000/realms/ministore
