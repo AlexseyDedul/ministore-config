@@ -5,28 +5,28 @@ spring:
         - id: catalogue-service-route
           uri: lb://ministore-catalogue-service
           predicates:
-            - Host=**catalogue.api.mini.store.127.0.0.1.nip.io**
+            - Host=**catalogue.api.mini.store.192.168.49.2.nip.io**
         - id: feedback-service-route
           uri: lb://ministore-feedback-service
           predicates:
-            - Host=**feedback.api.mini.store.127.0.0.1.nip.io**
+            - Host=**feedback.api.mini.store.192.168.49.2.nip.io**
         - id: manager-app-route
           uri: lb://ministore-manager-app
           predicates:
-            - Host=**manager.mini.store.127.0.0.1.nip.io**
+            - Host=**manager.mini.store.192.168.49.2.nip.io**
         - id: customer-app-route
           uri: lb://ministore-customer-app
           predicates:
-            - Host=**customer.mini.store.127.0.0.1.nip.io**
+            - Host=**customer.mini.store.192.168.49.2.nip.io**
   security:
     oauth2:
       client:
         provider:
           keycloak:
-            issuer-uri: http://keycloak.mini.store.127.0.0.1.nip.io/realms/ministore
+            issuer-uri: http://keycloak.mini.store.192.168.49.2.nip.io/realms/ministore
       resourceserver:
         jwt:
-          issuer-uri: http://keycloak.mini.store.127.0.0.1.nip.io/realms/ministore
+          issuer-uri: http://keycloak.mini.store.192.168.49.2.nip.io/realms/ministore
 eureka:
   instance:
     prefer-ip-address: true

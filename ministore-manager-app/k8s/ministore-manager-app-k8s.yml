@@ -4,7 +4,7 @@ spring:
       client:
         provider:
           keycloak:
-            issuer-uri: http://keycloak.mini.store.127.0.0.1.nip.io/realms/ministore
+            issuer-uri: http://keycloak.mini.store.192.168.49.2.nip.io/realms/ministore
         registration:
           keycloak:
             client-id: manager-app-k8s
@@ -17,7 +17,7 @@ spring:
             client-secret: eHKhkcNkc6cU2T2hmh6jXjJTi7BrowNt
       resourceserver:
         jwt:
-          issuer-uri: http://keycloak.mini.store.127.0.0.1.nip.io/realms/ministore
+          issuer-uri: http://keycloak.mini.store.192.168.49.2.nip.io/realms/ministore
 eureka:
   instance:
     prefer-ip-address: true
