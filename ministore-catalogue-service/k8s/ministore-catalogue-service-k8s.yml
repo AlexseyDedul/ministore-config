@@ -1,0 +1,31 @@
+springdoc:
+  swagger-ui:
+    oauth:
+      client-id: catalogue-service-swagger-ui-k8s
+      use-pkce-with-authorization-code-grant: true
+spring:
+  datasource:
+    url: jdbc:postgresql://catalogue-db-svc.ministore.svc.cluster.local:5432/catalogue
+    username: postgres
+    password: postgres
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: http://keycloak.mini.store.127.0.0.1.nip.io/realms/ministore
+      client:
+        provider:
+          keycloak:
+            issuer-uri: http://keycloak.mini.store.127.0.0.1.nip.io/realms/ministore
+keycloak:
+  uri: http://keycloak.mini.store.127.0.0.1.nip.io
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    service-url:
+      defaultZone: http://ministore-eureka-server-svc.ministore.svc.cluster.local:8761/eureka/
+management:
+  zipkin:
+    tracing:
+      endpoint: http://tempo-svc.ministore.svc.cluster.local:9411/api/v2/spans
