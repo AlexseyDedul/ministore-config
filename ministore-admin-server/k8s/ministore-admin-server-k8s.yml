@@ -3,11 +3,11 @@ spring:
     oauth2:
       resourceserver:
         jwt:
-          issuer-uri: http://keycloak.mini.store.192.168.49.2.nip.io/realms/ministore
+          issuer-uri: http://keycloak.mini.store.127.0.0.1.nip.io/realms/ministore
       client:
         provider:
           keycloak:
-            issuer-uri: http://keycloak.mini.store.192.168.49.2.nip.io/realms/ministore
+            issuer-uri: http://keycloak.mini.store.127.0.0.1.nip.io/realms/ministore
         registration:
           keycloak:
             client-id: admin-service-k8s
