@@ -1,6 +1,11 @@
 spring:
   cloud:
     gateway:
+      default-filters:
+        - RemoveRequestHeader=Forwarded
+        - RemoveRequestHeader=X-Forwarded-For
+        - AddRequestHeader=X-Forwarded-Host, ${request.headers.Host}
+        - AddRequestHeader=X-Forwarded-Proto, "http"
       routes:
         - id: catalogue-service-route
           uri: lb://ministore-catalogue-service
